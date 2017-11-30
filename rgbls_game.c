@@ -13,7 +13,8 @@
 #define MAX_OBSTACLES = 15;
 #define RIGHTBORDER = 3;
 #define LEFTBORDER = 0;
-#define TOP = 59;
+#define TOP = 60;
+#define WIDTH = 4;
 
 struct player myPlayer;
 struct obstacles[MAX_OBSTACLES] obstacleArray;
@@ -22,6 +23,7 @@ int numObstacles = 0;
 
 void moveRight();
 void moveLeft();
+//move the player left and right with buttons
 void controlPlayer(int i) {
     
     //check if right button has been pressed
@@ -50,6 +52,7 @@ void moveLeft() {
     
 }
 
+//move the obstacles down the playing board
 void updateObstacles() {
     
     for (int i = 0; i < numObstacles; ++i) {
@@ -62,14 +65,15 @@ void updateObstacles() {
     
 }
 
+//initialize an obstacle at its starting location
 void initObstacle(int i) {
     
     struct obstacle tmp;
    
-        int r = rand() % TOP;
+        int r = rand() % WIDTH;
         tmp.currPos.x = r;
-        tmp.currPos.y = TOP;
-        obstacleArray[i] = TOP;
+        tmp.currPos.y = TOP-1;
+        obstacleArray[i] = tmp;
     
 }
 
@@ -90,6 +94,7 @@ void detectCollision() {
             if (myPlayer.lives == 0) {
                 //GAME OVER
                 //just go into free mode when the game ends
+                exit();
             }
         }
     }
@@ -105,8 +110,8 @@ void displayGame() {
 
 void addObstacle() {
     
-    numObstacles++;
-    if (numObstacles <= MAX_OBSTACLES) {
+    if (numObstacles < MAX_OBSTACLES) {
+        numObstacles++;
         initObstacle(numObstacles-1);
     }
     
@@ -125,6 +130,7 @@ void removeObstacle() {
     //initialize player
     initPlayer();
     
+    //initialize obstacles
     
     
     while (myPlayer.lives != 0) {
@@ -136,3 +142,10 @@ void removeObstacle() {
     }
     
 } */
+
+
+void rgbls_game_init () {
+    
+    initPlayer();
+    
+}
