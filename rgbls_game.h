@@ -45,4 +45,6 @@ void addObstacle();
 
 void removeObstacle();
 
+void rgbls_game_init();
+
 #endif /* rgbls_game_h */
