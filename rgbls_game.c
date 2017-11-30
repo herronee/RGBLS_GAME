@@ -94,7 +94,7 @@ void detectCollision() {
             if (myPlayer.lives == 0) {
                 //GAME OVER
                 //just go into free mode when the game ends
-                exit();
+                //exit();
             }
         }
     }
