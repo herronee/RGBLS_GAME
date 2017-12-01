@@ -92,9 +92,8 @@ void detectCollision() {
         if (obstacleArray[i].currPos.x == myPlayer.currPos.x && obstacleArray[i].currPos.y == myPlayer.currPos.y) {
             (myPlayer.lives)--;
             if (myPlayer.lives == 0) {
-                //GAME OVER
-                //just go into free mode when the game ends
-                //exit();
+                initPlayer();
+                numObstacles = 0;
             }
         }
     }
