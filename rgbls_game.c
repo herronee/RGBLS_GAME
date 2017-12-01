@@ -8,9 +8,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include "rgbls_game.h"
+//#include "gpio.h"
 
 
-#define MAX_OBSTACLES = 15;
+#define MAX_OBSTACLES = 10;
 #define RIGHTBORDER = 3;
 #define LEFTBORDER = 0;
 #define TOP = 60;
