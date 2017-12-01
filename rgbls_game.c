@@ -17,10 +17,10 @@
 #define TOP = 60;
 #define WIDTH = 4;
 
-struct player myPlayer;
-struct obstacles[MAX_OBSTACLES] obstacleArray;
+//struct player myPlayer;
+//struct obstacles[MAX_OBSTACLES] obstacleArray;
 
-int numObstacles = 0;
+//int numObstacles = 0;
 
 void moveRight();
 void moveLeft();
