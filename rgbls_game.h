@@ -14,6 +14,11 @@
 #define MOVERIGHT = 2;
 #define MOVELEFT = 1;
 
+struct player myPlayer;
+struct obstacles[MAX_OBSTACLES] obstacleArray;
+
+int numObstacles = 0;
+
 struct location {
     int x;
     int y;
