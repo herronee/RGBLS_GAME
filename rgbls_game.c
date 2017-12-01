@@ -82,7 +82,7 @@ void initPlayer() {
     
     myPlayer.currPos.x = 0;
     myPlayer.currPos.y = 3;
-    myPlayer.lives = 3;
+    
     
 }
 
@@ -91,11 +91,8 @@ void detectCollision() {
     
     for (int i = 0; i < numObstacles; ++i) {
         if (obstacleArray[i].currPos.x == myPlayer.currPos.x && obstacleArray[i].currPos.y == myPlayer.currPos.y) {
-            (myPlayer.lives)--;
-            if (myPlayer.lives == 0) {
                 initPlayer();
                 numObstacles = 0;
-            }
         }
     }
     
